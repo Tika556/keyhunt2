@@ -2088,7 +2088,7 @@ void *thread_process_bsgs(void *vargp)	{
 							mpz_add(keyfound,keyfound,base_key);
 
 							gmp_sprintf(xpoint_str,"%0.64Zx",keyfound);
-							printf("Address uncompressed:  %s\n",public_address_uncompressed);
+							printf("[+] Publickey %s\n",pubkey);
 
 							Scalar_Multiplication(G,&point_aux2,keyfound);
 							gmp_sprintf(pubkey,"04%0.64Zx%0.64Zx",point_aux2.x,point_aux2.y);
@@ -2278,7 +2278,7 @@ void *thread_process_bsgs_random(void *vargp)	{
 							mpz_add(keyfound,keyfound,base_key);
 
 							gmp_sprintf(xpoint_str,"%0.64Zx",keyfound);
-							printf("Address uncompressed:  %s\n",public_address_uncompressed);
+							printf("[+] Publickey %s\n",pubkey);
 
 							Scalar_Multiplication(G,&point_aux2,keyfound);
 							gmp_sprintf(pubkey,"04%0.64Zx%0.64Zx",point_aux2.x,point_aux2.y);
